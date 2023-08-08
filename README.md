@@ -21,25 +21,60 @@ Harness the potential of OpenAI API to imbue your bot with AI capabilities.
 Utilize the Discord API to seamlessly integrate your bot into Discord servers.
 Understand how to expand your bot's functionalities with custom commands and interactions with other APIs.
 
-🏆 Prizes 🏆
-
-Participants who create exceptional and innovative Discord bots will have a chance to win exciting prizes, but the real reward lies in the knowledge and experience gained!
-
-We are excited to see the unique bots you'll create and the amazing features you'll incorporate. Let's make this event a memorable learning experience and have some fun along the way!
-
 Happy coding! 🚀🤖
 
+---
+
 ## Step 1: Clone The Repository
-- clone base github repo
+Download the code by clicking the green `Code` button and then `Download ZIP`
+
+<img width="500px" src="./images/download.jpeg">
+
+---
 
 ## Step 2: Install Software
 
 ### Step 2.1: Install Python
+To get started, you first need [install Python](https://www.python.org/downloads/). If you already have Python, you can move on to the next step.
 
-### Step 2.2: Install dependencies
-- open code in IDE of choice
-- setup venv
-- install dependences
+Double-check that Python and pip are installed by running `python3 --version` and `pip --version`in your CLI.\
+**(use `python` if `python3` doesn't work)**
+
+It should tell you the respective version numbers in the form of `Python 3.x.x` and `pip 23.x.x`
+
+**FOR WINDOWS DEVICES:** If the above fails, try the following:
+
+# ❗❗TODO:
+
+- get python path
+- add to system env variables 
+
+---
+
+### Step 2.2: Install modules
+Open the code in your IDE of choice. If you don't have one already, you can install a free one [here](https://code.visualstudio.com/download)
+
+Open up the CLI and enter the following commands:
+
+`pip install virtualenv`
+
+cd into your project folder and run
+
+`virtualenv venv`
+
+You should see that a folder named `venv` has been created
+
+**Mac / Linux:** `source venv/bin/activate`\
+**Windows:** `venv\Scripts\activate`
+
+Once you have your venv setup, you can install the required modules using the following command:
+
+`pip install -r requirements.txt`
+
+You can do a final check with `pip list` to see that all the modules have been installed
+
+---
+# ❗❗TODO:
 
 ## Step 3: Setup & Configuration
 
@@ -47,7 +82,11 @@ Happy coding! 🚀🤖
 
 ### Step 3.2: OpenAi Api key
 
+---
+
 ## Step 4: Run
+
+---
 
 ## Step 5: Extra for Experts
 - custom commands
