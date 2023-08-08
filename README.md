@@ -2,8 +2,6 @@
 
 ## Presented by GDSC - Google Developer Student Club
 
-## Introduction
-
 🤖 Introduction to Discord Bot Development 🤖
 
 Welcome to the GDSC Personal Companion Discord Bot Event! We are thrilled to have you here for an exciting journey into the world of AI-powered Discord bots! This event is all about creating your very own personal companion bot, which will be your loyal virtual friend on Discord. Whether you prefer to work individually or in groups, this event offers a fantastic opportunity to learn, collaborate, and build something truly awesome!
@@ -47,7 +45,9 @@ It should tell you the respective version numbers in the form of `Python 3.x.x` 
 # ❗❗TODO:
 
 - get python path
-- add to system env variables 
+<img width="500px" src="./images/path.jpeg">
+- add to system env variables
+<img width="500px" src="./images/systemenv.jpeg">
 
 ---
 
@@ -67,11 +67,11 @@ You should see that a folder named `venv` has been created
 **Mac / Linux:** `source venv/bin/activate`\
 **Windows:** `venv\Scripts\activate`
 
-Once you have your venv setup, you can install the required modules using the following command:
+Once the venv has been activated, you should see `(venv)` at the beginning of the path. You can now install the required modules using the following command:
 
 `pip install -r requirements.txt`
 
-You can do a final check with `pip list` to see that all the modules have been installed
+You can do a final check with `pip list` to see that all the modules have been installed correctly.
 
 ---
 # ❗❗TODO:
@@ -79,6 +79,27 @@ You can do a final check with `pip list` to see that all the modules have been i
 ## Step 3: Setup & Configuration
 
 ### Step 3.1: Discord bot setup
+To create and configure a discord bot, head to the [Discord Developer Portal](https://discord.com/developers/applications)
+
+Once you have logged in, click `New Application` in the top left corner.
+
+<img width="500px" src="./images/newapplication.jpeg">
+
+Click on the `Bot` tab on the left, this is where you can set the name and icon of your bot.
+
+Scroll down and enable all **Privileged Gateway Intents**
+
+<img width="500px" src="./images/intents.jpeg">
+
+Navigate to the `OAuth2` tab and click on `URL Generator`
+
+Enable only the `bot` option under **scopes**
+
+<img width="500px" src="./images/download.jpeg">
+
+Enable `Send Messages` under **Bot Permissions**, along with any other permissions you wish to grant your bot.
+
+<img width="500px" src="./images/download.jpeg">
 
 ### Step 3.2: OpenAi Api key
 
