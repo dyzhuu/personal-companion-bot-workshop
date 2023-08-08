@@ -24,10 +24,13 @@ class DiscordClient(discord.Client):
     async def on_message(self, message):
         if message.author == client.user:
             return
-        # if message.mentions[0].id == 1137755546007646291:
-        async with message.channel.typing():
-            response = chatgpt_response(message.content, self.memory)
-            await message.channel.send(response)
+        try:
+            if message.mentions[0].id == 1137755546007646291:
+                async with message.channel.typing():
+                    response = chatgpt_response(message.content, self.memory)
+                    await message.channel.send(response)
+        except:
+            pass
 
         """Truncate message history to decrease api token usage"""
         if len(self.memory) > MAX_MEMORY_SIZE:
