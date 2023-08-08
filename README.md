@@ -1,13 +1,12 @@
-# Smart Lanterns
+# Personal Companion Discord Bot
 
 ## Presented by GDSC - Google Developer Student Club
 
-## `Introduction`
-Welcome to the Google Developer Student Club (GDSC) University Club Event!
+## Introduction
 
 🤖 Introduction to Discord Bot Development 🤖
 
-We are thrilled to have you here for an exciting journey into the world of AI-powered Discord bots! This event is all about creating your very own personal companion bot, which will be your loyal virtual friend on Discord. Whether you prefer to work individually or in groups, this event offers a fantastic opportunity to learn, collaborate, and build something truly awesome!
+Welcome to the GDSC Personal Companion Discord Bot Event! We are thrilled to have you here for an exciting journey into the world of AI-powered Discord bots! This event is all about creating your very own personal companion bot, which will be your loyal virtual friend on Discord. Whether you prefer to work individually or in groups, this event offers a fantastic opportunity to learn, collaborate, and build something truly awesome!
 
 🚀 What to Expect 🚀
 
@@ -30,26 +29,26 @@ We are excited to see the unique bots you'll create and the amazing features you
 
 Happy coding! 🚀🤖
 
-## `Step 1: Code`
+## Step 1: Clone The Repository
 - clone base github repo
 
-## `Step 2: Install Software`
+## Step 2: Install Software
 
-## `Step 2.1: Install Python`
+### Step 2.1: Install Python
 
-## `Step 2.2: Install dependencies`
+### Step 2.2: Install dependencies
 - open code in IDE of choice
 - setup venv
 - install dependences
 
-## `Step 3: Setup & Configuration`
+## Step 3: Setup & Configuration
 
-## `Step 3.1: Discord bot setup`
+### Step 3.1: Discord bot setup
 
-## `Step 3.2: OpenAi Api key`
+### Step 3.2: OpenAi Api key
 
-## `Step 4: Run`
+## Step 4: Run
 
-## `Step 5: Extra for Experts`
+## Step 5: Extra for Experts
 - custom commands
 - read the discord.py docs for more features
