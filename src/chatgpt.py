@@ -6,9 +6,13 @@ load_dotenv()
 
 openai.api_key = os.getenv('API_KEY')
 
+if not os.path.exists('prompt.txt'):
+    raise Exception('No prompt.txt file found')
+
 """Enter custom system prompt to change the bot's personality"""
-file = open('prompt.txt', 'r')
-SYSTEM_PROMPT = file.read().replace('\n', ' ')
+with open('prompt.txt', 'r') as file:
+    SYSTEM_PROMPT = file.read().replace('\n', ' ')
+
 def chatgpt_response(prompt: str, memory):
     memory.append({"role": "user", "content": prompt})
     response = openai.ChatCompletion.create(

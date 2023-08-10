@@ -9,6 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TOKEN = os.getenv('TOKEN')
+BOT_ID = int(os.getenv('BOT_ID'))
 
 MAX_MEMORY_SIZE = 10
 
@@ -25,7 +26,7 @@ class DiscordClient(discord.Client):
         if message.author == client.user:
             return
         try:
-            if message.mentions[0].id == 1137755546007646291:
+            if message.mentions[0].id == BOT_ID:
                 async with message.channel.typing():
                     response = chatgpt_response(message.content, self.memory)
                     await message.channel.send(response)
