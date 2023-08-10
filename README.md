@@ -51,10 +51,10 @@ It should tell you the respective version numbers in the form of `Python 3.x.x` 
 
 ---
 
-### Step 2.2: Install modules
+### Step 2.2: Create Environment
 Open the code in your IDE of choice. If you don't have one already, you can install a free one [here](https://code.visualstudio.com/download)
 
-Open up the CLI and enter the following commands:
+Open up the CLI and enter the command:
 
 `pip install virtualenv`
 
@@ -62,7 +62,7 @@ cd into your project folder and run
 
 `virtualenv venv`
 
-You should see that a folder named `venv` has been created
+You should see that a folder named `venv` has been created.
 
 **Mac / Linux:** `source venv/bin/activate`\
 **Windows:** `venv\Scripts\activate`
@@ -76,14 +76,14 @@ You can do a final check with `pip list` to see that all the modules have been i
 ---
 # ❗❗TODO:
 
-## Step 3: Setup & Configuration
+## Step 3: Configuration Setup
 
-### Step 3.1: Discord bot setup
+### Step 3.1: Discord Bot setup
 To create and configure a discord bot, head to the [Discord Developer Portal](https://discord.com/developers/applications)
 
 Once you have logged in, click `New Application` in the top left corner.
 
-<img width="500px" src="./images/newapplication.jpeg">
+Enter the details and then enter into the application.
 
 Click on the `Bot` tab on the left, this is where you can set the name and icon of your bot.
 
@@ -93,13 +93,13 @@ Scroll down and enable all **Privileged Gateway Intents**
 
 Navigate to the `OAuth2` tab and click on `URL Generator`
 
-Enable only the `bot` option under **scopes**
+Enable the `bot` and `applications.commands` **scopes**
 
-<img width="500px" src="./images/download.jpeg">
+<img width="500px" src="./images/scopes.jpeg">
 
 Enable `Send Messages` under **Bot Permissions**, along with any other permissions you wish to grant your bot.
 
-<img width="500px" src="./images/download.jpeg">
+<img width="500px" src="./images/permissions.jpeg">
 
 ### Step 3.2: OpenAi Api key
 
