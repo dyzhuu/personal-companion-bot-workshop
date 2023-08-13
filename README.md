@@ -44,10 +44,10 @@ It should tell you the respective version numbers in the form of `Python 3.x.x` 
 
 # ❗❗TODO:
 
-- get python path
+- Find your Python path (where Python was just installed on your computer, note that it may be different from the image below)
 <img width="500px" src="./images/path.jpeg">
-- add to system env variables
-<img width="500px" src="./images/systemenv.jpeg">
+- Search for "Edit the system environment variables" in Windows search, and add the path that you found previously to the `PATH` variable. See below.
+<img width="750px" src="./images/systemenv.jpeg">
 
 ---
 
