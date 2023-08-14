@@ -110,5 +110,10 @@ Enable `Send Messages` under **Bot Permissions**, along with any other permissio
 ---
 
 ## Step 5: Extra for Experts
-- custom commands
-- read the discord.py docs for more features
+- Custom commands
+    - Go beyond the basics and experiment with creating more advanced custom commands. Learn to handle parameters, aliases, and complex formatting to give your bot a unique edge.
+- Explore OpenAI
+    - Delve into OpenAI's features. Try adjusting parameters like temperature and max tokens to fine-tune your bot's responses for different contexts, adding depth to your bot's interactions.
+- Read up on the [discord.py documentation](https://discordpy.readthedocs.io/en/stable/intro.html) to learn more about the features and intricacies of Python discord bots.
+
+These suggestions offer participants a chance to deepen their understanding of bot customization and OpenAI's capabilities. Happy coding! 🚀🤖
