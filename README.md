@@ -114,6 +114,11 @@ Enable `Send Messages` under **Bot Permissions**, along with any other permissio
     - Go beyond the basics and experiment with creating more advanced custom commands. Learn to handle parameters, aliases, and complex formatting to give your bot a unique edge.
 - Explore OpenAI
     - Delve into OpenAI's features. Try adjusting parameters like temperature and max tokens to fine-tune your bot's responses for different contexts, adding depth to your bot's interactions.
+    - Temperature: a parameter that determines the randomness of the model's output. 
+        - For example, a high temperature (e.g 0.8) will be beneficial when a creative response is needed, however there is a higher chance that the output will be nonsensical. A low temperature (e.g. 0.2) will stick to the most probable output and is good for straightforward tasks where a consistent answer is needed. 
+    - Max tokens: a parameter that sets the limit on the number of token's in the model's output. 
+        - For example, a short output (e.g max 40 tokens) can be used if you are wanting short answers or are looking for concise information. A long output (e.g. max 500 tokens) can be used for a more detailed answer. 
+    - When using these parameters, you can adjust them to fit your application and it is a good idea to test various settings to see which one works best. 
 - Read up on the [discord.py documentation](https://discordpy.readthedocs.io/en/stable/intro.html) to learn more about the features and intricacies of Python discord bots.
 
 These suggestions offer participants a chance to deepen their understanding of bot customization and OpenAI's capabilities. Happy coding! 🚀🤖
