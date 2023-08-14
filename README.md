@@ -102,7 +102,18 @@ Enable `Send Messages` under **Bot Permissions**, along with any other permissio
 <img width="500px" src="./images/permissions.jpeg">
 
 ### Step 3.2: OpenAi Api key
+The OpenAI API key is crucial to infuse your Discord bot with AI capabilities provided by OpenAI. 
+Here's how to obtain and set up your API key:
 
+Obtain your OpenAi Api key:
+- Go to [OpenAI Platform](https://platform.openai.com/signup/)
+- Sign up or log into your account
+- Once logged in, click Personal (at the top right corner of the page) and then click View API keys
+- Click "+ Create new secret key" to generate a new API key if you haven't already. Keep this key secure and do not share it publicly. 
+
+Integrate the key into your project:
+- Create a ".env" file in the root directory of your project
+- Inside ".env", add code: 'API_KEY=YourAPIKey'. Replace "YourAPIKey" with the API key you obtained from the OpenAI platform.
 ---
 
 ## Step 4: Run
