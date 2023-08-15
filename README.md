@@ -113,7 +113,7 @@ Obtain your OpenAi Api key:
 
 Integrate the key into your project:
 - Create a ".env" file in the root directory of your project
-- Inside ".env", add code: 'API_KEY=YourAPIKey'. Replace "YourAPIKey" with the API key you obtained from the OpenAI platform.
+- Inside the ".env" file you just create, add the following: `API_KEY=<YourAPIKey>`. Replace \<YourAPIKey\> with the API key you obtained from the OpenAI platform.
 ---
 
 ## Step 4: Run
