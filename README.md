@@ -38,7 +38,7 @@ To get started, you first need [install Python](https://www.python.org/downloads
 Double-check that Python and pip are installed by running `python3 --version` and `pip --version`in your CLI.\
 **(use `python` if `python3` doesn't work)**
 
-It should tell you the respective version numbers in the form of `Python 3.x.x` and `pip 23.x.x`
+It should output `Python 3.x.x` and `pip 23.x.x`
 
 **FOR WINDOWS DEVICES:** If the above fails, try the following:
 
@@ -58,16 +58,18 @@ Open up the CLI and enter the command:
 
 `pip install virtualenv`
 
-cd into your project folder and run
+`cd` into your project folder and run
 
 `python3 -m virtualenv venv`
 
 You should see that a folder named `venv` has been created.
 
+You can now activate the virtual environment using the following command.
+
 **Mac / Linux:** `source venv/bin/activate`\
 **Windows:** `venv\Scripts\activate`
 
-Once the venv has been activated, you should see `(venv)` at the beginning of the path. You can now install the required modules using the following command:
+Once the venv has been activated, you should see `(venv)` at the beginning of the path. You can now install the required modules with
 
 `pip install -r requirements.txt`
 
@@ -78,28 +80,40 @@ You can do a final check with `pip list` to see that all the modules have been i
 
 ## Step 3: Configuration Setup
 
+Create a `.env` file in the root directory. In the following steps, you will fill it up with this information:
+
+```.env
+TOKEN=xxxx-xxxx-xxxx
+API_KEY=xxxx-xxxx-xxxx
+BOT_ID=xxxx-xxxx-xxxx
+```
+
 ### Step 3.1: Discord Bot setup
 To create and configure a discord bot, head to the [Discord Developer Portal](https://discord.com/developers/applications)
 
 Once you have logged in, click `New Application` in the top left corner.
 
-Enter the details and then enter into the application.
+Enter the details and then enter xinto the application.
+
+You can get the `BOT_ID` (application id) on the general information tab.
 
 Click on the `Bot` tab on the left, this is where you can set the name and icon of your bot.
 
 Scroll down and enable all **Privileged Gateway Intents**
 
-<img width="500px" src="./images/intents.jpeg">
+<img width="800px" src="./images/intents.jpeg">
 
-Navigate to the `OAuth2` tab and click on `URL Generator`
+Click on `URL Generator` under the `OAuth2` tab.
 
 Enable the `bot` and `applications.commands` **scopes**
 
-<img width="500px" src="./images/scopes.jpeg">
+<img width="800px" src="./images/scopes.jpeg">
 
 Enable `Send Messages` under **Bot Permissions**, along with any other permissions you wish to grant your bot.
 
-<img width="500px" src="./images/permissions.jpeg">
+<img width="800px" src="./images/permissions.jpeg">
+
+You can now copy the generated URL and paste it into your Discord server. Click on the link to authorize the bot.
 
 ### Step 3.2: OpenAi Api key
 The OpenAI API key is crucial to infuse your Discord bot with AI capabilities provided by OpenAI. 
