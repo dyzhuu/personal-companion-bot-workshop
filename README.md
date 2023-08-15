@@ -60,7 +60,7 @@ Open up the CLI and enter the command:
 
 cd into your project folder and run
 
-`virtualenv venv`
+`python 3 -m virtualenv venv`
 
 You should see that a folder named `venv` has been created.
 
