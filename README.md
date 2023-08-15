@@ -80,26 +80,30 @@ You can do a final check with `pip list` to see that all the modules have been i
 
 ## Step 3: Configuration Setup
 
-Create a `.env` file in the root directory. In the following steps, you will fill it up with this information:
+Rename the `example.env` file in the root directory to `.env`. You will notice it has been prepopulated with the following information.
 
 ```.env
-TOKEN=xxxx-xxxx-xxxx
-API_KEY=xxxx-xxxx-xxxx
-BOT_ID=xxxx-xxxx-xxxx
+TOKEN=<YourBotToken>
+API_KEY=<YourAPIKey>
+BOT_ID=<YourBotId>
 ```
 
+The env file stores all your application secrets. You will be filing this out with the appropriate values in the following steps:
+
 ### Step 3.1: Discord Bot setup
-To create and configure a discord bot, head to the [Discord Developer Portal](https://discord.com/developers/applications)
+To create and configure a Discord bot, head to the [Discord Developer Portal](https://discord.com/developers/applications)
 
-Once you have logged in, click `New Application` in the top left corner.
+Once logged in, click `New Application` in the top left corner.
 
-Enter the details and then enter xinto the application.
+Enter the details and then enter into the application.
 
-You can get the `BOT_ID` (application id) on the general information tab.
+On `General Information` tab, there is an option to `copy` the application id. Copy this and replace `<YourBotId>` with it in the `.env` file.
 
-Click on the `Bot` tab on the left, this is where you can set the name and icon of your bot.
+Click on the `Bot` tab on the left, where you can set the name and icon of your bot. Here is also where you can find the Bot Token. If you don't see one, you may need to generate a new token with `reset`.
 
-Scroll down and enable all **Privileged Gateway Intents**
+Once you have your token, replace `<YourBotToken>` with it in the `.env` file.
+
+On the same `Bot` tab, scroll down and enable all **Privileged Gateway Intents**
 
 <img width="800px" src="./images/intents.jpeg">
 
@@ -109,11 +113,11 @@ Enable the `bot` and `applications.commands` **scopes**
 
 <img width="800px" src="./images/scopes.jpeg">
 
-Enable `Send Messages` under **Bot Permissions**, along with any other permissions you wish to grant your bot.
+Enable `Send Messages` under **Bot Permissions**, and any other permissions you wish to grant your bot.
 
 <img width="800px" src="./images/permissions.jpeg">
 
-You can now copy the generated URL and paste it into your Discord server. Click on the link to authorize the bot.
+You can now copy and paste the generated URL into your Discord server. Click on the link to authorize the bot.
 
 ### Step 3.2: OpenAi Api key
 The OpenAI API key is crucial to infuse your Discord bot with AI capabilities provided by OpenAI. 
@@ -126,11 +130,13 @@ Obtain your OpenAi Api key:
 - Click "+ Create new secret key" to generate a new API key if you haven't already. Keep this key secure and do not share it publicly. 
 
 Integrate the key into your project:
-- Create a ".env" file in the root directory of your project
-- Inside the ".env" file you just create, add the following: `API_KEY=<YourAPIKey>`. Replace \<YourAPIKey\> with the API key you obtained from the OpenAI platform.
+- Inside the `.env` file, replace `<YourAPIKey>` with the API key you obtained from the OpenAI platform.
+
 ---
 
 ## Step 4: Run
+
+cd into the `\src` directory and run `python3 run.py`
 
 ---
 
@@ -138,7 +144,7 @@ Integrate the key into your project:
 - Custom commands
     - Go beyond the basics and experiment with creating more advanced custom commands. Learn to handle parameters, aliases, and complex formatting to give your bot a unique edge.
 - Explore OpenAI
-    - Delve into OpenAI's features. Try adjusting parameters like temperature and max tokens to fine-tune your bot's responses for different contexts, adding depth to your bot's interactions.
+    - Delve into OpenAI's features. Adjust parameters like temperature and max tokens to fine-tune your bot's responses for different contexts, adding depth to your bot's interactions.
     - Temperature: a parameter that determines the randomness of the model's output. 
         - For example, a high temperature (e.g 0.8) will be beneficial when a creative response is needed, however there is a higher chance that the output will be nonsensical. A low temperature (e.g. 0.2) will stick to the most probable output and is good for straightforward tasks where a consistent answer is needed. 
     - Max tokens: a parameter that sets the limit on the number of token's in the model's output. 
