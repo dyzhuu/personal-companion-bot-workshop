@@ -24,6 +24,7 @@ Happy coding! 🚀🤖
 ---
 
 ## Step 1: Clone The Repository
+
 Download the code by clicking the green `Code` button and then `Download ZIP`
 
 <img width="500px" src="./images/download.jpeg">
@@ -33,6 +34,7 @@ Download the code by clicking the green `Code` button and then `Download ZIP`
 ## Step 2: Install Software
 
 ### Step 2.1: Install Python
+
 To get started, you first need [install Python](https://www.python.org/downloads/). If you already have Python, you can move on to the next step.
 
 Double-check that Python and pip are installed by running `python3 --version` and `pip --version`in your CLI.\
@@ -45,13 +47,14 @@ It should output `Python 3.x.x` and `pip 23.x.x`
 # ❗❗TODO:
 
 - Find your Python path (where Python was just installed on your computer, note that it may be different from the image below)
-<img width="500px" src="./images/path.jpeg">
+  <img width="500px" src="./images/path.jpeg">
 - Search for "Edit the system environment variables" in Windows search, and add the path that you found previously to the `PATH` variable. See below.
-<img width="750px" src="./images/systemenv.jpeg">
+  <img width="750px" src="./images/systemenv.jpeg">
 
 ---
 
 ### Step 2.2: Create Environment
+
 Open the code in your IDE of choice. If you don't have one already, you can install a free one [here](https://code.visualstudio.com/download)
 
 Open up the CLI and enter the command:
@@ -76,6 +79,7 @@ Once the venv has been activated, you should see `(venv)` at the beginning of th
 You can do a final check with `pip list` to see that all the modules have been installed correctly.
 
 ---
+
 # ❗❗TODO:
 
 ## Step 3: Configuration Setup
@@ -91,6 +95,7 @@ BOT_ID=<YourBotId>
 The env file stores all your application secrets. You will be filing this out with the appropriate values in the following steps:
 
 ### Step 3.1: Discord Bot setup
+
 To create and configure a Discord bot, head to the [Discord Developer Portal](https://discord.com/developers/applications)
 
 Once logged in, click `New Application` in the top left corner.
@@ -120,36 +125,40 @@ Enable `Send Messages` under **Bot Permissions**, and any other permissions you 
 You can now copy and paste the generated URL into your Discord server. Click on the link to authorize the bot.
 
 ### Step 3.2: OpenAi Api key
-The OpenAI API key is crucial to infuse your Discord bot with AI capabilities provided by OpenAI. 
+
+The OpenAI API key is crucial to infuse your Discord bot with AI capabilities provided by OpenAI.
 Here's how to obtain and set up your API key:
 
 Obtain your OpenAi Api key:
+
 - Go to [OpenAI Platform](https://platform.openai.com/signup/)
 - Sign up or log into your account
 - Once logged in, click Personal (at the top right corner of the page) and then click View API keys
-- Click "+ Create new secret key" to generate a new API key if you haven't already. Keep this key secure and do not share it publicly. 
+- Click "+ Create new secret key" to generate a new API key if you haven't already. Keep this key secure and do not share it publicly.
 
 Integrate the key into your project:
+
 - Inside the `.env` file, replace `<YourAPIKey>` with the API key you obtained from the OpenAI platform.
 
 ---
 
 ## Step 4: Run
 
-cd into the `\src` directory and run `python3 run.py`
+Run with `python3 src` in the root directory
 
 ---
 
 ## Step 5: Extra for Experts
+
 - Custom commands
-    - Go beyond the basics and experiment with creating more advanced custom commands. Learn to handle parameters, aliases, and complex formatting to give your bot a unique edge.
+  - Go beyond the basics and experiment with creating more advanced custom commands. Learn to handle parameters, aliases, and complex formatting to give your bot a unique edge.
 - Explore OpenAI
-    - Delve into OpenAI's features. Adjust parameters like temperature and max tokens to fine-tune your bot's responses for different contexts, adding depth to your bot's interactions.
-    - Temperature: a parameter that determines the randomness of the model's output. 
-        - For example, a high temperature (e.g 0.8) will be beneficial when a creative response is needed, however there is a higher chance that the output will be nonsensical. A low temperature (e.g. 0.2) will stick to the most probable output and is good for straightforward tasks where a consistent answer is needed. 
-    - Max tokens: a parameter that sets the limit on the number of token's in the model's output. 
-        - For example, a short output (e.g max 40 tokens) can be used if you are wanting short answers or are looking for concise information. A long output (e.g. max 500 tokens) can be used for a more detailed answer. 
-    - When using these parameters, you can adjust them to fit your application and it is a good idea to test various settings to see which one works best. 
+  - Delve into OpenAI's features. Adjust parameters like temperature and max tokens to fine-tune your bot's responses for different contexts, adding depth to your bot's interactions.
+  - Temperature: a parameter that determines the randomness of the model's output.
+    - For example, a high temperature (e.g 0.8) will be beneficial when a creative response is needed, however there is a higher chance that the output will be nonsensical. A low temperature (e.g. 0.2) will stick to the most probable output and is good for straightforward tasks where a consistent answer is needed.
+  - Max tokens: a parameter that sets the limit on the number of token's in the model's output.
+    - For example, a short output (e.g max 40 tokens) can be used if you are wanting short answers or are looking for concise information. A long output (e.g. max 500 tokens) can be used for a more detailed answer.
+  - When using these parameters, you can adjust them to fit your application and it is a good idea to test various settings to see which one works best.
 - Read up on the [discord.py documentation](https://discordpy.readthedocs.io/en/stable/intro.html) to learn more about the features and intricacies of Python discord bots.
 
 These suggestions offer participants a chance to deepen their understanding of bot customization and OpenAI's capabilities. Happy coding! 🚀🤖
