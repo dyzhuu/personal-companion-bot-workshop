@@ -42,12 +42,17 @@ Double-check that Python and pip are installed by running `python3 --version` an
 
 It should output `Python 3.x.x` and `pip 23.x.x`
 
-**FOR WINDOWS DEVICES:** If the above fails, try the following:
+<br>
 
-# ❗❗TODO:
+#### FOR WINDOWS DEVICES:
 
-- Find your Python path (where Python was just installed on your computer, note that it may be different from the image below)
+You may get an error along the lines of: `Python is not recognized as an internal or external command`\
+To resolve this error, follow the steps below:
+
+- Find your Python path (where Python was just installed on your computer, _note that it may be different from the image below_)
+
   <img width="500px" src="./images/path.jpeg">
+
 - Search for "Edit the system environment variables" in Windows search, and add the path that you found previously to the `PATH` variable. See below.
   <img width="750px" src="./images/systemenv.jpeg">
 
@@ -80,11 +85,9 @@ You can do a final check with `pip list` to see that all the modules have been i
 
 ---
 
-# ❗❗TODO:
-
 ## Step 3: Configuration Setup
 
-Rename the `example.env` file in the root directory to `.env`. You will notice it has been prepopulated with the following information.
+Rename the `example.env` file in the root directory to `.env`. Notice it has been prepopulated with the following information.
 
 ```.env
 TOKEN=<YourBotToken>
@@ -98,15 +101,13 @@ The env file stores all your application secrets. You will be filing this out wi
 
 To create and configure a Discord bot, head to the [Discord Developer Portal](https://discord.com/developers/applications)
 
-Once logged in, click `New Application` in the top left corner.
+Once logged in, click `New Application` and enter into the application.
 
-Enter the details and then enter into the application.
+- On the `General Information` tab, there is an option to `copy` the application id. Copy this and replace `<YourBotId>` with it in the `.env` file.
 
-On `General Information` tab, there is an option to `copy` the application id. Copy this and replace `<YourBotId>` with it in the `.env` file.
+Click on the `Bot` tab on the left, where you can set the name and icon of your bot. Here is also where you can find the Bot Token. _If you don't see one, you may need to generate a new token_.
 
-Click on the `Bot` tab on the left, where you can set the name and icon of your bot. Here is also where you can find the Bot Token. If you don't see one, you may need to generate a new token with `reset`.
-
-Once you have your token, replace `<YourBotToken>` with it in the `.env` file.
+- Once you have your token, replace `<YourBotToken>` with it in the `.env` file.
 
 On the same `Bot` tab, scroll down and enable all **Privileged Gateway Intents**
 
@@ -127,9 +128,8 @@ You can now copy and paste the generated URL into your Discord server. Click on 
 ### Step 3.2: OpenAi Api key
 
 The OpenAI API key is crucial to infuse your Discord bot with AI capabilities provided by OpenAI.
-Here's how to obtain and set up your API key:
 
-Obtain your OpenAi Api key:
+To obtain and set up your OpenAI API key:
 
 - Go to [OpenAI Platform](https://platform.openai.com/signup/)
 - Sign up or log into your account
@@ -144,21 +144,26 @@ Integrate the key into your project:
 
 ## Step 4: Run
 
-Run with `python3 src` in the root directory
+Run the application with `python3 src` in the root directory
+
+If successful, the console should log: `Logged in as <Bot> 🤖`
+
+To start chatting with the bot, tag the bot and enter the desired message like so:\
+`@bot_name How are you today?`
+
+You can customise the bot response with a custom prompt using the `prompt.txt` file. An example prompt has been provided.
 
 ---
 
 ## Step 5: Extra for Experts
 
-- Custom commands
-  - Go beyond the basics and experiment with creating more advanced custom commands. Learn to handle parameters, aliases, and complex formatting to give your bot a unique edge.
-- Explore OpenAI
-  - Delve into OpenAI's features. Adjust parameters like temperature and max tokens to fine-tune your bot's responses for different contexts, adding depth to your bot's interactions.
-  - Temperature: a parameter that determines the randomness of the model's output.
-    - For example, a high temperature (e.g 0.8) will be beneficial when a creative response is needed, however there is a higher chance that the output will be nonsensical. A low temperature (e.g. 0.2) will stick to the most probable output and is good for straightforward tasks where a consistent answer is needed.
-  - Max tokens: a parameter that sets the limit on the number of token's in the model's output.
-    - For example, a short output (e.g max 40 tokens) can be used if you are wanting short answers or are looking for concise information. A long output (e.g. max 500 tokens) can be used for a more detailed answer.
-  - When using these parameters, you can adjust them to fit your application and it is a good idea to test various settings to see which one works best.
 - Read up on the [discord.py documentation](https://discordpy.readthedocs.io/en/stable/intro.html) to learn more about the features and intricacies of Python discord bots.
+- Incorporate another API
+  - You can take your bot to the next level by incorporating custom APIs. This will allow your bot to fetch real-time data, perform specific tasks, or provide dynamic information beyond its built-in capabilities.
+  - You can get started by looking through this [list of free public apis](https://github.com/public-apis/public-apis)
+- Adjust your OpenAI model parameters:
+  - Temperature: a parameter that determines the randomness of the model's output.
+  - Max tokens: a parameter that sets the limit on the number of token's in the model's output.
+  - Find out more [here](https://platform.openai.com/docs/api-reference/chat/create)
 
-These suggestions offer participants a chance to deepen their understanding of bot customization and OpenAI's capabilities. Happy coding! 🚀🤖
+We have provided some example code in the `examples` folder to get you started. Feel free to customise the bot to your liking, we look forward to seeing all your unique creations! 🚀🤖
