@@ -20,7 +20,6 @@ class DiscordClient(discord.Client):
         print(f'Logged in as {client.user} 🤖')
 
     async def on_message(self, message):
-
         # return if the author of the message is the bot, so we avoid a infinite loop
         if message.author == client.user:
             return

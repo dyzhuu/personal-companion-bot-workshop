@@ -29,6 +29,8 @@ def chatgpt_response(prompt: str, memory):
         # adjusts the model temperature (how 'creative' it can be with its responses)
         temperature=1
     )
+    # use this syntax to traverse JSON
     message_content = response['choices'][0]['message']
+    # once we have the message, append it to the memory list.
     memory.append(message_content.to_dict())
     return message_content['content']
