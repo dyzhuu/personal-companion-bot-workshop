@@ -4,31 +4,28 @@ import discord
 import os
 import requests
 from dotenv import load_dotenv
+from discord.ext import commands
 
 load_dotenv()
 
 intents = discord.Intents.default()
 intents.message_content = True
 
-client = discord.Client(intents=intents)
+client = commands.Bot(command_prefix="!", intents=intents)
 
 TOKEN = os.getenv('TOKEN')
-catfact_url = "https://meowfacts.herokuapp.com/"
+catfact_url = "https://catfact.ninja/fact"
 
-@client.event
-async def on_message(message):
-    if message.author == client.user:
-        return
+@client.command()
+async def meow(ctx):
+    async with ctx.typing():
+        response = requests.get(catfact_url)
 
-    if message.content.startswith('!meow'):
-        async with message.channel.typing():
-            response = requests.get(catfact_url)
-
-            if response.status_code == 200:
-                catfact_data = response.json()
-                cat_fact = catfact_data['data'][0]
-                await message.channel.send(f"🐱 Fun Cat Fact: {cat_fact}")
-            else:
-                await message.channel.send("Sorry, I couldn't fetch a cat fact at the moment.")
+        if response.status_code == 200:
+            catfact_data = response.json()
+            cat_fact = catfact_data['fact']
+            await ctx.send(f"🐱 Fun Cat Fact: {cat_fact}")
+        else:
+            await ctx.send("Sorry, I couldn't fetch a cat fact at the moment.")
 
 client.run(TOKEN)
