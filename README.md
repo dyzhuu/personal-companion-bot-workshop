@@ -37,10 +37,24 @@ Download the code by clicking the green `Code` button and then `Download ZIP`
 
 To get started, you first need [install Python](https://www.python.org/downloads/). If you already have Python, you can move on to the next step.
 
-Double-check that Python and pip are installed by running `python3 --version` and `pip --version`in your CLI.\
-**(use `python` if `python3` doesn't work)**
+Double-check that Python and pip are installed by running one of the following:
 
-It should output `Python 3.x.x` and `pip 23.x.x`
+```
+py --version
+python --version
+python3 --version
+```
+
+Once one of these commands work, take note of which one (py, python, or python3) worked on your system. This will be the command used to run Python scripts moving forward.
+
+Also double check you have pip installed using one of the following commands
+
+```
+pip --version
+pip3 --version
+```
+
+This should have been installed during your python installation, (if you are on windows, there should have been a checkbox during installation)
 
 <br>
 
@@ -157,7 +171,14 @@ You can customise the bot response with a custom prompt using the `prompt.txt` f
 
 ## Step 5: Extra for Experts
 
+You can further customise your bot to your liking with additional features, below are some ideas to get you started.
+
 - Read up on the [discord.py documentation](https://discordpy.readthedocs.io/en/stable/intro.html) to learn more about the features and intricacies of Python discord bots.
+- Incorporate custom commands
+- Handle discord events
+  - You've learnt about how to handle message event with `on_message`, try experiment with handling [other discord events](https://discordpy.readthedocs.io/en/stable/api.html#event-reference), you can get started by showing a welcome message when someone joins the server!
+- Embeds and Rich Messages
+  - Spice up your bot by using embeds and rich messages to make it more visually attractive
 - Incorporate another API
   - You can take your bot to the next level by incorporating custom APIs. This will allow your bot to fetch real-time data, perform specific tasks, or provide dynamic information beyond its built-in capabilities.
   - You can get started by looking through this [list of free public apis](https://github.com/public-apis/public-apis)
@@ -165,5 +186,6 @@ You can customise the bot response with a custom prompt using the `prompt.txt` f
   - Temperature: a parameter that determines the randomness of the model's output.
   - Max tokens: a parameter that sets the limit on the number of token's in the model's output.
   - Find out more [here](https://platform.openai.com/docs/api-reference/chat/create)
+- For more advanced customisation, you could integrate databases like SQLite, MongoDB or PostgreSQL to store information
 
 We have provided some example code in the `examples` folder to get you started. Feel free to customise the bot to your liking, we look forward to seeing all your unique creations! 🚀🤖

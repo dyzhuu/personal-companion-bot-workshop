@@ -14,7 +14,6 @@ BOT_ID = int(os.getenv('BOT_ID'))
 MAX_MEMORY_SIZE = 10
 
 class DiscordClient(discord.Client):
-
     def __init__(self, *, intents: Intents, **options):
         super().__init__(intents=intents, **options)
         self.memory = []
