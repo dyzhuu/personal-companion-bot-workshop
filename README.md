@@ -156,16 +156,32 @@ Integrate the key into your project:
 
 ---
 
-## Step 4: Run
+## Step 4: Code
+
+### Step 4.1: Implementing the OpenAI Api
+
+Open up the `src` folder, here is where you will be coding eveything.
+
+Check in `bot.py` and `chatgpt.py`
+
+You will notice that the boilerplate code for the bot has already been provided. It is up to you to complete it using the OpenAI API.
+
+An example of fully functioning code has been provided in the `example` folder. Feel free to reference it (or just copy paste it if you want to skip right to the fun stuff).
+
+You can get started with implementation by first simply sending the user's message back at them.
+
+Details for implmentation of the OpenAI api, adding personality to the bot, and adding memory to the bot is all in the `example` folder.
+
+### Step 4.2: Run the code
 
 Run the application with `python3 src` in the root directory
 
 If successful, the console should log: `Logged in as <Bot> 🤖`
 
-To start chatting with the bot, tag the bot and enter the desired message like so:\
+If you copied the example code, you can start chatting by tagging the bot and entering the desired message like so:\
 `@bot_name How are you today?`
 
-You can customise the bot response with a custom prompt using the `prompt.txt` file. An example prompt has been provided.
+You can also customise the bot response with a custom prompt using the `prompt.txt` file. An example prompt has been provided.
 
 ---
 
@@ -188,4 +204,4 @@ You can further customise your bot to your liking with additional features, belo
   - Find out more [here](https://platform.openai.com/docs/api-reference/chat/create)
 - For more advanced customisation, you could integrate databases like SQLite, MongoDB or PostgreSQL to store information
 
-We have provided some example code in the `examples` folder to get you started. Feel free to customise the bot to your liking, we look forward to seeing all your unique creations! 🚀🤖
+We have provided some example code in the `extra-for-experts` folder to get you started. Feel free to customise the bot to your liking, we look forward to seeing all your unique creations! 🚀🤖

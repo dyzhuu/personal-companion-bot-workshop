@@ -16,21 +16,7 @@ with open(path, 'r') as file:
     SYSTEM_PROMPT = file.read().replace('\n', ' ')
 
 # this is the main funciton for generating a response
-def chatgpt_response(prompt: str, memory):
-    memory.append({"role": "user", "content": prompt})
-    response = openai.ChatCompletion.create(
-        # this is the pre-trained model used to
-        model="gpt-3.5-turbo",
-        # this is the input message. Notice that we prepend the system prompt to set the bot's 'personality'
-        # the API recognises the current message as being at the end of the list, and uses the other messages for context
-        messages=[{"role": "system", "content": SYSTEM_PROMPT}, *memory],
-        # sets the maximum tokens in the response
-        max_tokens=100,
-        # adjusts the model temperature (how 'creative' it can be with its responses)
-        temperature=1
-    )
-    # use this syntax to traverse JSON
-    message_content = response['choices'][0]['message']
-    # once we have the message, append it to the memory list.
-    memory.append(message_content.to_dict())
-    return message_content['content']
+def chatgpt_response(prompt: str):
+    # TODO: Implement chatgpt_response function via openai chat completion api
+    # https://platform.openai.com/docs/guides/gpt/chat-completions-api
+    pass
