@@ -137,7 +137,7 @@ Enable `Send Messages` under **Bot Permissions**, and any other permissions you 
 
 <img width="800px" src="./images/permissions.jpeg">
 
-You can now copy and paste the generated URL into your Discord server. Click on the link to authorize the bot.
+You can now copy and paste the generated URL into your browser to add it to your Discord server. Click on the link to authorize the bot.
 
 ### Step 3.2: OpenAi Api key
 
